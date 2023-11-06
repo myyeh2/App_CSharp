@@ -46,7 +46,7 @@
 
 ### 我的解釋如下 ： 
 
->  ***爲了求解微分方程式，電機系的```訊號與系統```、```線性系統 ```; 機械系的```控制系統```；和土木系的```結構動力學```，都有相同微分方程式的求解問題，使用Laplace Transform、Fourier Transform、Z Transform、或是捲積分法、Runge-Kuta 法等等。本例是使用Laplace Transform的方法，求得微分方程式的狀態空間響應【State-space Response】。*** 
+>  ***爲了求解微分方程式，電機系的```訊號與系統```、```線性系統 ```; 機械系的```控制系統```；和土木系的```結構動力學```，都有相同微分方程式的求解問題，使用Laplace Transform、Fourier Transform、Z Transform、或是捲積分法、Runge-Kutta 法等等。本例是使用Laplace Transform的方法，求得微分方程式的狀態空間響應【State-space Response】。*** 
 >
 >   ***在空間維度【Space Dimension】上，有二個自由度Degree of Freedom( m = 2 )，在狀態維度【State Dimension】上，也有二個自由度( r = 2 )，即二階微分方程式，在時間維度【Time Dimension】上，是時間軸上的函數，可以任意選取時間軸上的任何點。整個【系統矩陣】或是稱【狀態矩陣】 A 為(mXr)X(mXr) 【非對稱正方形4X4實數矩陣】，狀態空間變數共有 m * (r + 1) 個。*** 
 >

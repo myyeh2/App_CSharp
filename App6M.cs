@@ -38,7 +38,7 @@ namespace ConsoleApp6M
     CxMatrix V = eig.CxVector;
     CxMatrix Q = eig.CxMatrixQ;
     // 係數向量d。 
-    CxToHexp Hexp = new CxToHexp(D, Q, 4.5);
+    CxHexp Hexp = new CxHexp(D, Q, 4.5);
     CxMatrix MatTemp = Hexp.GetCxMatrix;
     RowSlice rowSlice = new RowSlice(MatTemp, 2, 1);
     CxMatrix Mat1 = rowSlice.GetCxMatrix;

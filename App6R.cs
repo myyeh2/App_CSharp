@@ -26,7 +26,7 @@ CxMatrix D = eig.CxMatrixD;
 CxMatrix V = eig.CxVector; 
 CxMatrix Q = eig.CxMatrixQ;
 
-CxToHexp Hexp = new CxToHexp(D, Q, 0);
+CxHexp Hexp = new CxHexp(D, Q, 0);
 CxMatrix MatTemp = Hexp.GetCxMatrix;
 CxMatrix d = ~MatTemp * y0;
 
@@ -48,7 +48,7 @@ for (int i = 0; i != iRow; i++)
 {
     double t = step * i;
 
-    Hexp = new CxToHexp(D, Q, t);
+    Hexp = new CxHexp(D, Q, t);
     MatTemp = Hexp.GetCxMatrix;
     ReMatrix y = (ReMatrix)(MatTemp * d); 
     ReMatrix yDot = A * y;

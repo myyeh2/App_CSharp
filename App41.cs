@@ -27,7 +27,7 @@ namespace ConsoleApp41
     CxMatrix V = eig.CxVector;
     CxMatrix Q = eig.CxMatrixQ;
     // 係數向量d
-    CxToHexp Hexp = new CxToHexp(D, Q, 0);
+    CxHexp Hexp = new CxHexp(D, Q, 0);
     CxMatrix MatTemp = Hexp.GetCxMatrix;
     CxMatrix d = ~MatTemp * y0Start;
 
@@ -49,7 +49,7 @@ namespace ConsoleApp41
     {
         double t = step * i;
 
-        Hexp = new CxToHexp(D, Q, t);
+        Hexp = new CxHexp(D, Q, t);
         MatTemp = Hexp.GetCxMatrix;
         CxMatrix yh_Cx = MatTemp * d;
         ReMatrix yh_Re = (ReMatrix)yh_Cx;

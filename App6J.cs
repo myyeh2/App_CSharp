@@ -23,7 +23,7 @@ namespace ConsoleApp6J
     CxMatrix V = eig.CxVector; 
     CxMatrix Q = eig.CxMatrixQ;
 
-    CxToHexp Hexp = new CxToHexp(D, Q, 0);
+    CxHexp Hexp = new CxHexp(D, Q, 0);
     CxMatrix MatTemp = Hexp.GetCxMatrix;
     CxMatrix d = ~MatTemp * y0;
 
@@ -45,7 +45,7 @@ namespace ConsoleApp6J
     {
         double t = step * i;
 
-        Hexp = new CxToHexp(D, Q, t);
+        Hexp = new CxHexp(D, Q, t);
         MatTemp = Hexp.GetCxMatrix;
         ReMatrix yh_Re = (ReMatrix)(MatTemp * d); 
         ReMatrix yhDot_Re = A * yh_Re;

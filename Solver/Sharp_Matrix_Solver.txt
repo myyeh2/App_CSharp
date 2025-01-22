@@ -1,0 +1,306 @@
+Note: 
+For Reference Only. This Document will be revised latter.
+ 
+Sharp  Matrix  Solver
+(2021/10/27)(2021/11/14)(2021/11/26)(2022/4/8)(2022/4/29)  
+(2022/10/3)(2022/10/27)(2023/3/4) 
+    
+A : 
+( 01 )	Add1 
+( 02 )	Add2 
+( 03 )	Add3 
+( 07 )	Affine 
+( 04 )	Arnoldi 
+( 05 )	AUG 
+( 06 )  AUG2 
+( 08 )  Arange 
+
+C: 
+( 01 )	CG 
+( 02 )	CHOL 
+( 03 )	ComMat  (用於動態系統之合併)
+( 04 )	CoordMat 
+( 05 )	CxMatrix 
+( 06 )	CxPR 
+( 07 ) 	CxPR2
+( 08 )	CxAdd2 
+( 09 )	CxAdd3 
+( 10 )	CxM2 
+( 11 )	CxM3 
+( 12 )  CxINV 
+( 13 )  CxDET 
+( 14 )	Class1      
+( 15)   ComMat(用於垂直方向之合併)         
+( 16 )  CxComMat(複數矩陣用於垂直方向之合併)         
+( 17 )        
+( 18 )       
+( 19 )         
+( 20 )  ChkNullMat       
+( 21 )  ChkSqMat 
+( 22 )  ComMat2(用於水平方向之合併) 
+( 23 )  CxPivotPro 
+( 24 )  CxMatPro 
+( 25 )  CxScalar    
+( 26 )          
+( 27 )          
+( 28 )          
+( 29 )           
+( 30 )	CxAdd1  
+( 31 )	CxM1  
+( 32 )	CxSwapRow 
+( 33 )	CxGetRow 
+( 34 )	CxSetMatrix2 
+( 35 )	CxGetVector 
+( 36 )	CxComMat2 (複數矩陣用於水平方向之合併) 
+( 37 )  CxIP (same as CxIP2)    
+( 38 )  CxIP2 (same as CxIP)
+( 39 )  CxFromX 
+( 40 )	CxHerm 
+( 41 )	CxMatPro2 
+( 42 )  CxIsDiag           
+( 43 )  CxRotator         
+( 44 )  CxIsUpperTri      
+( 45 )  CxLRRotator        
+( 46 )  CxEIG        
+( 47 )  CxToX         
+( 48 )  CxIsImZero 
+( 49 )  ClearZeroCol 
+( 50 )  CxClearZeroCol 
+( 51 )  CxDexp 
+( 52 )  CxTP                    
+( 53 )  CxIP3(same as CxIP4)
+( 54 )  CxIP4(same as CxIP3) 
+( 55 )  CxIP5( used this one,  not CxIP, CxIP2, CxIP3, CxIP4 ) 
+( 56 )  CxPROJ 
+( 57 )  COS 
+( 58 )  CxCOS 
+( 59 )  CxHexp(即Q * CxDexp) 
+
+
+
+D: 
+( 08 )	Deflator 
+( 01 )	Descent 
+( 02 )	DET 
+( 03 )	DET2 
+( 04 )	DET3 
+( 05 )	DET4 
+( 07 )	DETZero 
+( 06 ) 	DirectSum 
+
+E: 
+( 03 )	EntryMax 
+( 02 )	EV 
+( 01 )	EVCM 
+( 04 )  EIG4 
+( 05 )  EIG2  
+( 06 )  EIG3  
+( 07 )  EIG 
+( 08 )  ErrValue 
+
+G:
+( 05 )  Gauss 
+( 06 )  GasssJordan 
+( 07 )	GaussJordan2 
+( 03 )	GaussSeidel 
+( 04 )	GetRow 
+( 01 )	GetVector 
+( 08 )	GMatrix 
+( 09 )	GS  ( use Modified Gram-Smidth )
+( 02 )	GS2  ( use Classical Gram-smidth )
+( 10 )  GS3  (waiting to combine with GS class)
+( 11 )  GetMatrixQ4  (use PartMat class )
+( 12 )  GetMatrixQ2  (use PartMat2 class ) 
+( 13 )  GetMatrixQ3  ( use PartMat3 class )  
+( 14 )  GetMatrixQ   ( use RedMatPro )        
+
+
+H : 
+( 01 )	HM 
+( 02 )	HM2 
+( 03 )  Hollow 
+
+I :
+( 01 )	Iden 
+( 02 )	Insert 
+( 03 )  INV 
+( 04 )  IP 
+( 14 )	IsColZero 
+( 19 )	IsDetOne 
+( 17 )	IsDetZero 
+( 18 )	IsDiag 
+( 05 )	IsDiagZero 
+( 06 )  IsElementBad 
+( 07 )	IsEqual 
+( 12 )	IsInvertible 
+( 08 )	IsOrthogonal 
+( 16 )	IsPivotZero 
+( 15 )	IsRowColZero 
+( 09 )  IsSchur 
+( 10 )	IsSelfDiagonal 
+( 11 )	IsSelfOrthonormal 
+( 13 )	IsSymm 
+
+J : 
+( 01 )	Jacobi 
+( 02 )	Jacobi2 
+
+K : 
+( 01 ) 	KroneckerProduct 
+( 02 ) 	Krylov 
+
+L : 
+( 01 )	Lanczos 
+( 02 )	LDU 
+( 03 )	LRGS 
+( 04 )	LRReflector 
+( 05 )	LRRotator 
+( 06 )	LRUnsymm 
+( 07 )   
+( 08 )	LS 
+( 09 )	LU 
+( 10 )         
+( 11 )    
+( 12 )        
+( 13 )      
+( 14 )   LRGS2   
+( 15 )   LRReflector2   
+( 16 )   LeastSQ    
+( 17 )   LeasrSQ2  
+( 18 )   LinSpace 
+
+
+
+M : 
+( 01 )	M1 
+( 02 )	M2 
+( 03 ) 	M3 
+( 04 )	MKCMatrix 
+( 05 )  MKCMatrix2  
+( 06 )  MKCMatrix3 
+( 07 )  MKCMatrix4  
+( 08 )  MC2  
+( 09 )  MQ2 
+( 10 )  MatPro 
+( 11 )  MatrixClass ( use ReMatrix )   
+
+N : 
+( 01 ) 	Neg 
+
+O : 
+( 01 )	OP 
+
+P : 
+( 11 )  PermCount 
+( 01 )	Polar 
+( 10 ) 	Poster 
+( 02 )	PowerMax 
+( 09 )	PowerMin 
+( 03 ) 	PR 
+( 04 )	PR2 
+( 05 )	PR3 
+( 06 )	PROJ 
+( 07 )	PROJ2 
+( 08 )	Purify 
+( 12 )  PartMat4  ( use last column with last entry as pivot ) 
+( 13 )  PartMat2  ( use first column with first entry as pivot ) 
+( 14 )  PartMat3  ( use last column with first entry as pivot ) 
+( 15 )  PivotPro 
+( 16 )  PR_modal_parameter 
+( 17 )  PR_state_space  
+( 18 )  PR4 
+
+
+Q : 
+( 01 )	QR 
+
+
+R : 
+( 07 )	RandMatrix 
+( 05 )	Ranker 
+( 01 )	ReadTextFile 
+( 02 )	Reflector 
+( 06 )	Reflector2  ( same as Reflector )
+( 03 )	Roots 
+( 04 )	Rotator 
+( 08 )  RandMatrix2 
+( 09 )  RedMatPro 
+( 10 )  ReMatrix ( same as MatrixClass) 
+( 11 )  ReRotator  
+( 12 )  ReMatPro  
+( 13 )  Remainder 
+( 14 )  RowSlice 
+( 15 )  RowSort 
+
+S : 
+( 01 )	SetMatrix 
+( 19 )	SetMatrix2 
+( 21 )	SetPos 
+( 02 )	SOR 
+( 03 )	Sub 
+( 04 )	Sum1 
+( 05 ) 	Sum10 
+( 06 )	Sum11 
+( 07 )  Sum12 
+( 08 )	Sum2 
+( 09 )  Sum3 
+( 10 )	Sum4 
+( 11 ) 	Sum5 
+( 12 )  Sum6 
+( 13 )	Sum7 
+( 14 )	Sum8 
+( 15 ) 	Sum9  
+( 16 )	SVD  ( use LRReflector2 )
+( 24 )	SVD2  ( use LRRotator )
+( 25 )	SVD3  ( use LRGS2 ) 
+( 26 )	SwapCol  
+( 17 )	SwapDiag
+( 20 )	SwapRow 
+( 22 )	Sylvester 
+( 23 )	Sylvester2 
+( 27 )  SchurToDiag 
+( 28 )  Special (static class )  
+( 29 )  SysMatrix1  
+( 30 )  SysMatrix2  
+( 31 )  SysMatrix3  
+
+T : 
+( 01 )	TimeCal  
+( 02 )	
+( 03 )  
+( 04 )	ToCompanion 
+( 05 )	ToEigenValue 
+( 08 )	ToMat 
+( 11 )	ToMatrixA 
+( 06 )	ToRow 
+( 10 )	ToSquare 
+( 09 )  ToVec 
+( 07 )  TP
+( 13 )  ToHexp  
+
+
+U : 
+( 01 )	UV 
+
+V : 
+( 03 )	VectorOne 
+( 01 )	VERT 
+( 02 )	VERT2 
+
+X : 
+( 01 )	XAB 
+( 04 )  XAB2
+( 02 )	XLB 
+( 03 )	XUB
+
+Z:   
+( 01 )	Zero 
+
+
+
+
+  
+
+
+
+
